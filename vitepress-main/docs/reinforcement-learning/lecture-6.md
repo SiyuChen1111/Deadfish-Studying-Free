@@ -2,37 +2,37 @@
 
 ### Introduction
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/EnrMNo0rbQRSV6YFW5hbtahlBldXF1gduHCyCs3ZyXc=.png)
+![](/assets/EnrMNo0rbQRSV6YFW5hbtahlBldXF1gduHCyCs3ZyXc=.png)
 
 * How can we scale up the model-free methods for prediction and control from the last two lectures?
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/-olHs-X3IS0VDEoF07rbMdn40SQJ2iNyq00ox_NB4vU=.png)
+![](/assets/-olHs-X3IS0VDEoF07rbMdn40SQJ2iNyq00ox_NB4vU=.png)
 
 * What we'll do is not just reduce the memory but also allow us to generalize -- to fit our function to approximate our states that we've never seen.
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/P3G-BbexoQfphTjM7gNItFNxbOzXP5exdirf21IiDuk=.png)
+![](/assets/P3G-BbexoQfphTjM7gNItFNxbOzXP5exdirf21IiDuk=.png)
 
 * Consider this action here, how could that be?
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/tthvMh_samWNK2AiRWBrItoHYUtlvwYe5C7tqG0vDR4=.png)
+![](/assets/tthvMh_samWNK2AiRWBrItoHYUtlvwYe5C7tqG0vDR4=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/D-_pGqbccloxOmqrOos36tliAUhoMo466cyIfPp5v8Y=.png)
+![](/assets/D-_pGqbccloxOmqrOos36tliAUhoMo466cyIfPp5v8Y=.png)
 
 ### Incremental Methods
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/OhkFUUG3-0XxLJI0s2Uft-8ihYsAV_-PUUficQfrTu4=.png)
+![](/assets/OhkFUUG3-0XxLJI0s2Uft-8ihYsAV_-PUUficQfrTu4=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/1u6_N0U3ggVt4uH5oV_y_2qtzrO4QiVPf2CK3mmEBrk=.png)
+![](/assets/1u6_N0U3ggVt4uH5oV_y_2qtzrO4QiVPf2CK3mmEBrk=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/zQT4Au3Hqyujupnw_Dw3vm7EPjDEqtQUdodDjRR640I=.png)
+![](/assets/zQT4Au3Hqyujupnw_Dw3vm7EPjDEqtQUdodDjRR640I=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/R28W3mX6Udr2GNoPB8-CEVON_JIZ33m2hLcOzQq-Gj8=.png)
+![](/assets/R28W3mX6Udr2GNoPB8-CEVON_JIZ33m2hLcOzQq-Gj8=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/UT-h5oOn36Bk9v5nordHsFtu-zucyn20Oobbq85Udj4=.png)
+![](/assets/UT-h5oOn36Bk9v5nordHsFtu-zucyn20Oobbq85Udj4=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/XX9Vu-FtrI24ia48_9ji6Nix5QmnRqaJm406hAHBE_Q=.png)
+![](/assets/XX9Vu-FtrI24ia48_9ji6Nix5QmnRqaJm406hAHBE_Q=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/ZCkOSG1D-adcToUwlb5vDTAVtuovRq1EyURphviQMNM=.png)
+![](/assets/ZCkOSG1D-adcToUwlb5vDTAVtuovRq1EyURphviQMNM=.png)
 
 ![](../assets/reinforcement-learning/assets/reinforcement-learning/y6BvCEZqsoM2ie0z6ip--wSN6gH1c594SGrVfocTPPA=.jpeg)
 
@@ -44,34 +44,34 @@
 
 ![](../assets/reinforcement-learning/assets/reinforcement-learning/0lrmoEXUlAD4v5xCQpm6VaW58dm4NNx0HrmP6JngXzs=.jpeg)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/Nug_AX1ihM5f9kV2Ael7-0l8wX8kU0_5odDoQgkbJO8=.png)
+![](/assets/Nug_AX1ihM5f9kV2Ael7-0l8wX8kU0_5odDoQgkbJO8=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/ZqBaL7Ooa-kpairJ8iwibowRMHWtyXX0kP55D86uEMc=.png)
+![](/assets/ZqBaL7Ooa-kpairJ8iwibowRMHWtyXX0kP55D86uEMc=.png)
 
 ### Batch Method
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/yAmwh4DVM_YiTogHDsilHLImEWliH85375hC7PCnu9M=.png)
+![](/assets/yAmwh4DVM_YiTogHDsilHLImEWliH85375hC7PCnu9M=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/tAWb2hBpHCMz8BNYtQOtif9BV1THVvGZ0TPxOu1emqc=.png)
+![](/assets/tAWb2hBpHCMz8BNYtQOtif9BV1THVvGZ0TPxOu1emqc=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/dtPLgMLsfIgTOJ7ZizLri2hsnmlGof6Del1qiDMhR4o=.png)
+![](/assets/dtPLgMLsfIgTOJ7ZizLri2hsnmlGof6Del1qiDMhR4o=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/i4_Hw-kPR6YLBqNsr5RO3ci_0go3YQF1TawHi2DT4XI=.png)
+![](/assets/i4_Hw-kPR6YLBqNsr5RO3ci_0go3YQF1TawHi2DT4XI=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/z01ZQjPijiZRst9hg8deCJOoDenjGro906v6OAHgcZU=.png)
+![](/assets/z01ZQjPijiZRst9hg8deCJOoDenjGro906v6OAHgcZU=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/D4HVqWB_INzIYRAtTP0Di1Ts3kUOX7iUlh_OuuScrFg=.png)
+![](/assets/D4HVqWB_INzIYRAtTP0Di1Ts3kUOX7iUlh_OuuScrFg=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/xgdWRJc94FJOcGNdiDKLvSXENQRHqARvyBAkA6-Rn_c=.png)
+![](/assets/xgdWRJc94FJOcGNdiDKLvSXENQRHqARvyBAkA6-Rn_c=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/PZ-GFu72iKyIM4BUzRQ7lL_SJRFfjuME-hA3tsvpLvE=.png)
+![](/assets/PZ-GFu72iKyIM4BUzRQ7lL_SJRFfjuME-hA3tsvpLvE=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/xf6WDGP3h5xjmOI9jGGFr8o3-Q6XEJPyOdFQvlUzzhQ=.png)
+![](/assets/xf6WDGP3h5xjmOI9jGGFr8o3-Q6XEJPyOdFQvlUzzhQ=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/OfF2t9VSYykkQC8cQ3bAHXpKl-EgNTPT_0FBpad-qi4=.png)
+![](/assets/OfF2t9VSYykkQC8cQ3bAHXpKl-EgNTPT_0FBpad-qi4=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/wChVDHkISNr7oGzoAW0UyG7ZyjsHPH6L8SpfJKLSmS4=.png)
+![](/assets/wChVDHkISNr7oGzoAW0UyG7ZyjsHPH6L8SpfJKLSmS4=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/NiApkRTHphM1X1_ir2dzSa9qEW09ShLGaosBo_LQcBI=.png)
+![](/assets/NiApkRTHphM1X1_ir2dzSa9qEW09ShLGaosBo_LQcBI=.png)
 
 
