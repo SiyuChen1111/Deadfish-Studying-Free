@@ -1,0 +1,87 @@
+---
+layout: home
+---
+
+# Study Notes
+
+Welcome to my personal study notes collection. Here you'll find organized notes from various subjects I'm learning.
+
+<div class="hero">
+  <h1>My Study Notes</h1>
+  <p>A collection of my learning journey across different subjects and courses.</p>
+</div>
+
+## Subjects
+
+<div class="subject-grid">
+
+<div class="subject-card">
+  <h2>🚀 Reinforcement Learning</h2>
+  <div class="progress-bar">
+    <div class="progress-fill" style="width: 100%;"></div>
+  </div>
+  <p>7 lectures covering foundations of RL, MDPs, model-free methods, and value function approximation.</p>
+  <a href="/reinforcement-learning/">View Notes →</a>
+</div>
+
+</div>
+
+---
+
+<style scoped>
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.subject-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.15);
+  transition: all 0.3s ease;
+  border: 2px solid var(--vp-c-divider-light);
+}
+
+.subject-card h2 {
+  margin-top: 0;
+  color: var(--vp-c-brand);
+  font-size: 1.5rem;
+}
+
+.progress-bar {
+  height: 6px;
+  background: var(--vp-c-divider);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--vp-c-brand), var(--vp-c-brand-light));
+}
+
+.subject-card p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.subject-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--vp-c-brand-light);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.subject-card a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 107, 157, 0.25);
+}
+</style>
