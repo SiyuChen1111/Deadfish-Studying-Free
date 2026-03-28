@@ -1,10 +1,11 @@
 ---
 layout: home
+
+hero:
+  name: "Deadfish🐟"
+  text: "Studying Free"
+  tagline: Welcome to my personal study notes collection
 ---
-
-# Deadfish🐟 Studying Free
-
-Welcome to my personal study notes collection.
 
 ## Courses
 
