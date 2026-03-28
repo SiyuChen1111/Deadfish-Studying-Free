@@ -6,35 +6,52 @@
 
 ```
 my-notes/
-├── notes/          # 存放 .md 笔记文件
-├── images/         # 存放笔记中的图片
-└── README.md       # 本说明文件
+├── notes/
+│   ├── course-name/         # 每门课程一个文件夹
+│   │   ├── lecture-1.md     # 课程笔记
+│   │   ├── lecture-2.md
+│   │   └── images/          # 这门课的图片
+│   │       └── .gitkeep
+│   └── another-course/      # 另一门课
+│       ├── notes.md
+│       └── images/
+└── README.md
 ```
 
 ## 如何使用
 
-### 1. 写笔记
-- 将你的 `.md` 笔记文件放入 `notes/` 文件夹
-- 将笔记中的图片放入 `images/` 文件夹
-- 在笔记中使用相对路径引用图片：`![图片描述](../images/你的图片.png)`
+### 1. 新建课程文件夹
+为每门课程在 `notes/` 下创建一个文件夹：
+```
+my-notes/notes/你的课程名/images/
+```
 
-### 2. 整理到网站
-当你准备好将笔记发布到网站时，告诉我：
-- 笔记的名称/主题
-- 想要放在网站的哪个位置
+### 2. 写笔记
+- 将 `.md` 笔记文件放入对应的课程文件夹
+- 将图片放入该课程的 `images/` 文件夹
+- 在笔记中使用相对路径引用图片：`![图片描述](./images/你的图片.png)`
 
-我会帮你：
-1. 将笔记移动到 `docs/` 下对应的课程文件夹
-2. 更新 VitePress 配置添加导航
-3. 更新首页和索引页面的链接
+### 3. 整理到网站
+当你准备好将某门课程发布到网站时，告诉我课程名称，我会：
+1. 在 `docs/` 下创建课程文件夹
+2. 移动笔记和图片
+3. 更新网站导航配置
+4. 更新首页和索引页面
 
 ## 示例
 
-假设你有一门 "Machine Learning" 课程的笔记：
+假设你有一门 "Machine Learning" 课程：
 
-1. 在 `notes/` 中创建 `machine-learning.md`
-2. 在 `images/` 中放入相关图片
-3. 告诉我你想整理，我会：
-   - 在 `docs/` 下创建 `machine-learning/` 文件夹
-   - 移动笔记和图片
-   - 更新网站配置
+```
+my-notes/notes/machine-learning/
+├── lecture-1.md
+├── lecture-2.md
+└── images/
+    ├── diagram.png
+    └── formula.png
+```
+
+在 `lecture-1.md` 中引用图片：
+```markdown
+![示意图](./images/diagram.png)
+```
