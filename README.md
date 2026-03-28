@@ -4,7 +4,7 @@ Personal study notes hosted on Vercel.
 
 ## 🌐 访问网站
 
-部署到 Vercel 后，你会获得一个类似 `https://your-project.vercel.app` 的链接。
+点击链接访问：[https://my-study-notes-lemon.vercel.app/](https://my-study-notes-lemon.vercel.app/)
 
 ## 📁 Project Structure
 
