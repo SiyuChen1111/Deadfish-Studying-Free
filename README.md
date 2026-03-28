@@ -12,42 +12,41 @@ Personal study notes hosted on Vercel.
 My-Study-Notes/
 ├── docs/                    # VitePress documentation content
 │   ├── assets/              # Images and static files
-│   ├── reinforcement-learning/  # RL lecture notes
+│   ├── reinforcement-learning/      # RL lecture notes
+│   ├── principle-of-cognitive-behavioral-computing/  # Cognitive Behavioral Computing notes
+│   ├── machine-learning-derivation/  # Machine Learning formula derivations
 │   └── index.md             # Homepage
 ├── .github/workflows/       # GitHub Actions for deployment
 ├── vercel.json              # Vercel deployment config
 └── package.json             # Dependencies
 ```
 
-## 🚀 Local Development
+## 📚 Courses
 
-```bash
-# Install dependencies
-npm install
+### Reinforcement Learning
+- 7 lectures on RL foundations
+- Topics: MDPs, model-free methods, value function approximation
+- [Course Link](https://my-study-notes-lemon.vercel.app/reinforcement-learning/README)
 
-# Start dev server
-npm run docs:dev
+### Cognitive Behavioral Computing [studying]
+- Principle of Cognitive Behavioral Computing
+- Topics: interdisciplinary triangle, Marr's three-level theory
 
-# Build for production
-npm run docs:build
-```
 
-## 📝 Adding New Courses
+### Machine Learning Derivation [studying]
+- Mathematical foundations and formula derivations
+- Topics: Variational Inference, EM Algorithm, Bayesian Inference
 
-1. Create a new folder in `docs/`
-2. Add markdown files (e.g., `lecture-1.md`)
-3. Update `docs/index.md` to link the new course
-4. Commit and push - Vercel will deploy automatically
 
-## 🚀 部署到 Vercel
+## 🚀 Deployment
 
-1. 访问 [vercel.com](https://vercel.com) 并登录（可用 GitHub 账号）
-2. 点击 "Add New Project"
-3. 导入你的 GitHub 仓库 `SiyuChen1111/My-Study-Notes`
-4. Vercel 会自动检测配置并部署
-5. 部署完成后你会获得一个 `.vercel.app` 域名
+- **Hosting**: Vercel
+- **CI/CD**: GitHub Actions
+- **Framework**: VitePress
 
-## 🔗 Links
+## 📝 Notes Format
 
-- [VitePress Documentation](https://vitepress.dev/)
-- [Vercel](https://vercel.com/)
+- Markdown with Mermaid diagrams
+- LaTeX support for mathematical formulas
+- Interactive navigation
+- Responsive design
