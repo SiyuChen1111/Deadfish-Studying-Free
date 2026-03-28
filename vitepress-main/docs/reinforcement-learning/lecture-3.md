@@ -19,7 +19,7 @@
 
   ![](/assets/I5LkAzSsK6xRE_R1ri4-ofWr1xVnGQhLqnBQGj0Ao3g=.png)
 
-  ![](../assets/reinforcement-learning/assets/reinforcement-learning/MegK8DTdZcnI69NlcNGSldzgqRDqqem_qpVVlJihDWU=.png "The Small Gridworld")
+  ![](/assets/MegK8DTdZcnI69NlcNGSldzgqRDqqem_qpVVlJihDWU=.png "The Small Gridworld")
 
   ![](/assets/P8jv_pvIIhvCj5PNFYOIiu4XwCKOThV0IIj3yunarok=.png)
 * Policy Iteration 
@@ -38,7 +38,6 @@
   * The max over the $q_{\pi}$ has to be at least greater than equal to one particular $q_{\pi}$ so the max over all actions has to be at least as good as one particular action that we could plug in which is what the one we were choosing before.
   * So all of this that's a long-winded way to say that the value function improves over one step at least that if we just take our $\pi^{\prime}$for one step, we'll get at least as much reward as the policy we started with.
   * So we don't make things worse ever, we always make things at least make them better, (though) we haven't yet said that this is guaranteed to keep getting better or to reach the optimal value.
-  ![](/assets/0f_3AF3HEGRFEmJksbJP0P8TxviG4yOMv9c5JhQYVqc=.png)
   * Being greedy doesn't mean that we only look at one step of immediate reward, instead, it means that we look at the best action we can take if we optimize over all actions we can do for one step, and then look at our value function which summarizes the whole future —— all future rewards we're going to get going into the future but under our previous policy.
   ![](/assets/mnLHaLKJmBRM58Ni8YbJXALH9AZksiBdETk5AFvkfx8=.png)
 * Value Iteration
@@ -56,6 +55,5 @@
 
 ![](/assets/K_W3x-JlvC2thDg7lRLYelzKTfrOdzPNuabqD56JQqE=.png)
 
-![](/assets/5yklp_KdfVaCKHXyV986iFduIeEvYEfuXGHgLTDQXwg=.png)
 
 

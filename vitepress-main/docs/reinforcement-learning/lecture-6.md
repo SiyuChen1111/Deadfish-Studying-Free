@@ -6,7 +6,6 @@
 
 * How can we scale up the model-free methods for prediction and control from the last two lectures?
 
-![](/assets/-olHs-X3IS0VDEoF07rbMdn40SQJ2iNyq00ox_NB4vU=.png)
 
 * What we'll do is not just reduce the memory but also allow us to generalize -- to fit our function to approximate our states that we've never seen.
 
@@ -22,7 +21,6 @@
 
 ![](/assets/OhkFUUG3-0XxLJI0s2Uft-8ihYsAV_-PUUficQfrTu4=.png)
 
-![](/assets/1u6_N0U3ggVt4uH5oV_y_2qtzrO4QiVPf2CK3mmEBrk=.png)
 
 ![](/assets/zQT4Au3Hqyujupnw_Dw3vm7EPjDEqtQUdodDjRR640I=.png)
 
@@ -34,15 +32,14 @@
 
 ![](/assets/ZCkOSG1D-adcToUwlb5vDTAVtuovRq1EyURphviQMNM=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/y6BvCEZqsoM2ie0z6ip--wSN6gH1c594SGrVfocTPPA=.jpeg)
+![](/assets/y6BvCEZqsoM2ie0z6ip--wSN6gH1c594SGrVfocTPPA=.jpeg)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/i_j2ycQG7J3bydLfTLvaZDPo9Izv3RONSIxxYwIAoJo=.jpeg)
+![](/assets/i_j2ycQG7J3bydLfTLvaZDPo9Izv3RONSIxxYwIAoJo=.jpeg)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/aVLDDCCnJFyJFS4y-qXihGfqjwLxWqm-9blwM9vhNyM=.jpeg)
+![](/assets/aVLDDCCnJFyJFS4y-qXihGfqjwLxWqm-9blwM9vhNyM=.jpeg)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/Mwqlm-2CSuASvb8AMYsno50x6RQn3dleZ70RtMmF0L8=.jpeg)
+![](/assets/Mwqlm-2CSuASvb8AMYsno50x6RQn3dleZ70RtMmF0L8=.jpeg)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/0lrmoEXUlAD4v5xCQpm6VaW58dm4NNx0HrmP6JngXzs=.jpeg)
 
 ![](/assets/Nug_AX1ihM5f9kV2Ael7-0l8wX8kU0_5odDoQgkbJO8=.png)
 

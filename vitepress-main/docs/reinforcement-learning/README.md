@@ -127,7 +127,6 @@
   ![](/assets/rh7kqacRDL2yhgxELtrsXm4hzabKvw64lM6FM2rQJo0=.png)
 * Markov Decision Process
 
-  ![](/assets/6MjRFgU-DDuMmizUAs0rQg50JPIsNsInWpSaf182RYs=.png)
 * Policies
 
   ![](/assets/x6QFUnd1mnlyPlOvNwknFwuCFt7vZyw-V4T4_HsS0m8=.png)
@@ -199,7 +198,7 @@
 
   ![](/assets/I5LkAzSsK6xRE_R1ri4-ofWr1xVnGQhLqnBQGj0Ao3g=.png)
 
-  ![](../assets/reinforcement-learning/assets/MegK8DTdZcnI69NlcNGSldzgqRDqqem_qpVVlJihDWU=.png "The Small Gridworld")
+  ![](/assets/MegK8DTdZcnI69NlcNGSldzgqRDqqem_qpVVlJihDWU=.png "The Small Gridworld")
 
   ![](/assets/P8jv_pvIIhvCj5PNFYOIiu4XwCKOThV0IIj3yunarok=.png)
 * Policy Iteration 
@@ -218,7 +217,6 @@
   * The max over the $q_{\pi}$ has to be at least greater than equal to one particular $q_{\pi}$ so the max over all actions has to be at least as good as one particular action that we could plug in which is what the one we were choosing before.
   * So all of this that's a long-winded way to say that the value function improves over one step at least that if we just take our $\pi^{\prime}$for one step, we'll get at least as much reward as the policy we started with.
   * So we don't make things worse ever, we always make things at least make them better, (though) we haven't yet said that this is guaranteed to keep getting better or to reach the optimal value.
-  ![](/assets/0f_3AF3HEGRFEmJksbJP0P8TxviG4yOMv9c5JhQYVqc=.png)
   * Being greedy doesn't mean that we only look at one step of immediate reward, instead, it means that we look at the best action we can take if we optimize over all actions we can do for one step, and then look at our value function which summarizes the whole future —— all future rewards we're going to get going into the future but under our previous policy.
   ![](/assets/mnLHaLKJmBRM58Ni8YbJXALH9AZksiBdETk5AFvkfx8=.png)
 * Value Iteration
@@ -236,7 +234,6 @@
 
 ![](/assets/K_W3x-JlvC2thDg7lRLYelzKTfrOdzPNuabqD56JQqE=.png)
 
-![](/assets/5yklp_KdfVaCKHXyV986iFduIeEvYEfuXGHgLTDQXwg=.png)
 
 
 
@@ -271,7 +268,6 @@
   ![](/assets/6tvVKUkSCDBT09KVte8Ak0JkYMjPexyqQfRWhwVyDjs=.png)
   * The TD target is like a random target which depends on exactly what happens over the next time step but we get some immediate reward and some value wherever we happen to end up and we're going to move towards that TD target.
   * In Monte-Carlo, you wouldn't get the negative reward or be able to update your value for your prediction, but in TD learning, you can immediately update the value function you had before and be capable to change your future decision.
-  ![](/assets/1Z-QT-IZUjkRD43jQxpp3O3I9RFBcSsM9vwNyAxcBv4=.png)
   * We changed our predicted total time based on each state just happened to us.
 
     ![](/assets/xMhEVU3qX94GMpzeDTts95siyv5HPLI7uDFGz-32fB8=.png)
@@ -280,13 +276,11 @@
   ![](/assets/qLQ7b-D89XjO3SR0LW6OCtLWp-osakIEYxqDhU53La8=.png)
   * What's the meaning of TD learning?
     * The basic answer is that in the TD, it finds the true value function as long as you run this thing out, it will always ground itself because even though you correct yourself based on your guess and that guess might not be right, that guess will then be updated towards something that happens subsequently which will ground it more and more, so all of your guesses are progressively becoming better and that information backs up such that you get the correct value function.
-  ![](/assets/-rXZt62TUZh4JNIn2hh1Noe16X5_cAM7T3itnWAbEOw=.png)
 
   ![](/assets/g-P1Mn_rJHo5mWCP11QwzjaL5E_Q2zhi_uqTkIyu28w=.png)
 
   ![](/assets/YBl18d7Uqv4NmC-nAGB1seMdQPaI4e9XqXK_pEMrxsI=.png)
 
-  ![](/assets/4LOKW71ymbcrjHFq5GJ1DmfmrVP9kmRHuxDNlmCOjMU=.png)
 
   ![](/assets/bfmGjfdU1O3jJkCzzeSq8GsOqkUPVs5T7zG6DyHg9Y0=.png)
   * TD is trying to explain the data in the best possible way.
@@ -294,7 +288,6 @@
 
   ![](/assets/zVwscVofdLVe7ix6hPIRL7kITsv5ey8AItFeNw0IEWE=.png)
 
-  ![](/assets/3UYWJcU27MYqZe5R48xYDRgoFoyUTyU55foPNbdnWss=.png)
 
   ![](/assets/xReck_Nq2IeDOI3LOWntndu_wbI7PGGTmzK06UtspCc=.png)
 
@@ -311,7 +304,6 @@
 
   ![](/assets/eu450a2mYfrnevIxqzIRV6Qb_SGeQw0QTahdqA7w1iA=.png)
 
-  ![](/assets/-yLKl2IyXGh6KRPUm6nErhOkmQkHp4K-uNPiKgsKD0A=.png)
   * &#x20;What we talk about is just whether we do online or off-line updates and that means whether we immediately update our value function or whether we defer the updates of our value function until the end of the episode.
   * So what we're going to do is trying to come up with the best all of n and that's the goal to efficiently consider all n at once.
   ![](/assets/WL5A3FIUokfMQJUnooDvSqIoTsOrOqclt9B3LTqIh2A=.png)
@@ -324,7 +316,6 @@
 
   ![](/assets/dzpVaev66b-zPTrg1yJTZD8gzm7u3i_E6ib1j26MvJk=.png)
 
-  ![](/assets/2tLirFgoq6DF5smnYhV-f6_mckBXqscFyCACMM9pcOA=.png)
 
   ![](/assets/qAOqXjO_xorlsFmy3XCk-teqlnBbU3Kl3oEbChdDvDA=.png)
 
@@ -366,13 +357,12 @@
 
 ![](/assets/TZhf8vdXHJC3ulhPQGzgpWqn70WUJEBoj0bt0t74ED0=.png)
 
-![](/assets/0SoCarWa7A6F20S71sbMmZ_hy5nhGI_XP7B7tk6MFmE=.png)
 
 ![](/assets/Jy_QlscjW5lovmUGUbAigXQO7wngzQJkhHq4DT0eAH0=.png)
 
 ![](/assets/Jy_QlscjW5lovmUGUbAigXQO7wngzQJkhHq4DT0eAH0=.png)
 
-![](../assets/reinforcement-learning/assets/Jy_QlscjW5lovmUGUbAigXQO7wngzQJkhHq4DT0eAH0=.png "妙啊哇趣。")
+![](/assets/Jy_QlscjW5lovmUGUbAigXQO7wngzQJkhHq4DT0eAH0=.png "妙啊哇趣。")
 
 ![](/assets/jAuSibr4RQghKJSxuWU0e7MEz-mkJIipLkWDb2BbPGA=.png)
 
@@ -438,7 +428,6 @@
 
 * How can we scale up the model-free methods for prediction and control from the last two lectures?
 
-![](/assets/-olHs-X3IS0VDEoF07rbMdn40SQJ2iNyq00ox_NB4vU=.png)
 
 * What we'll do is not just reduce the memory but also allow us to generalize -- to fit our function to approximate our states that we've never seen.
 
@@ -454,7 +443,6 @@
 
 ![](/assets/OhkFUUG3-0XxLJI0s2Uft-8ihYsAV_-PUUficQfrTu4=.png)
 
-![](/assets/1u6_N0U3ggVt4uH5oV_y_2qtzrO4QiVPf2CK3mmEBrk=.png)
 
 ![](/assets/zQT4Au3Hqyujupnw_Dw3vm7EPjDEqtQUdodDjRR640I=.png)
 
@@ -466,15 +454,14 @@
 
 ![](/assets/ZCkOSG1D-adcToUwlb5vDTAVtuovRq1EyURphviQMNM=.png)
 
-![](../assets/reinforcement-learning/assets/y6BvCEZqsoM2ie0z6ip--wSN6gH1c594SGrVfocTPPA=.jpeg)
+![](/assets/y6BvCEZqsoM2ie0z6ip--wSN6gH1c594SGrVfocTPPA=.jpeg)
 
-![](../assets/reinforcement-learning/assets/i_j2ycQG7J3bydLfTLvaZDPo9Izv3RONSIxxYwIAoJo=.jpeg)
+![](/assets/i_j2ycQG7J3bydLfTLvaZDPo9Izv3RONSIxxYwIAoJo=.jpeg)
 
-![](../assets/reinforcement-learning/assets/aVLDDCCnJFyJFS4y-qXihGfqjwLxWqm-9blwM9vhNyM=.jpeg)
+![](/assets/aVLDDCCnJFyJFS4y-qXihGfqjwLxWqm-9blwM9vhNyM=.jpeg)
 
-![](../assets/reinforcement-learning/assets/Mwqlm-2CSuASvb8AMYsno50x6RQn3dleZ70RtMmF0L8=.jpeg)
+![](/assets/Mwqlm-2CSuASvb8AMYsno50x6RQn3dleZ70RtMmF0L8=.jpeg)
 
-![](../assets/reinforcement-learning/assets/0lrmoEXUlAD4v5xCQpm6VaW58dm4NNx0HrmP6JngXzs=.jpeg)
 
 ![](/assets/Nug_AX1ihM5f9kV2Ael7-0l8wX8kU0_5odDoQgkbJO8=.png)
 
@@ -528,7 +515,6 @@
 
 ![](/assets/ldQLAJ7yvfcuKVNfA-FC9fjKLx5OuKNdUd3cXGVki1s=.png)
 
-![](/assets/-O-XiqPF83IRGLiFIRxQUcBlhYW3ewao2vt06xCdFTY=.png)
 
 * We don't know where we start.
 * What does the regret look like?

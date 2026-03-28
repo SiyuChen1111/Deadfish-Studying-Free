@@ -29,7 +29,6 @@
   ![](/assets/6tvVKUkSCDBT09KVte8Ak0JkYMjPexyqQfRWhwVyDjs=.png)
   * The TD target is like a random target which depends on exactly what happens over the next time step but we get some immediate reward and some value wherever we happen to end up and we're going to move towards that TD target.
   * In Monte-Carlo, you wouldn't get the negative reward or be able to update your value for your prediction, but in TD learning, you can immediately update the value function you had before and be capable to change your future decision.
-  ![](/assets/1Z-QT-IZUjkRD43jQxpp3O3I9RFBcSsM9vwNyAxcBv4=.png)
   * We changed our predicted total time based on each state just happened to us.
 
     ![](/assets/xMhEVU3qX94GMpzeDTts95siyv5HPLI7uDFGz-32fB8=.png)
@@ -38,13 +37,11 @@
   ![](/assets/qLQ7b-D89XjO3SR0LW6OCtLWp-osakIEYxqDhU53La8=.png)
   * What's the meaning of TD learning?
     * The basic answer is that in the TD, it finds the true value function as long as you run this thing out, it will always ground itself because even though you correct yourself based on your guess and that guess might not be right, that guess will then be updated towards something that happens subsequently which will ground it more and more, so all of your guesses are progressively becoming better and that information backs up such that you get the correct value function.
-  ![](/assets/-rXZt62TUZh4JNIn2hh1Noe16X5_cAM7T3itnWAbEOw=.png)
 
   ![](/assets/g-P1Mn_rJHo5mWCP11QwzjaL5E_Q2zhi_uqTkIyu28w=.png)
 
   ![](/assets/YBl18d7Uqv4NmC-nAGB1seMdQPaI4e9XqXK_pEMrxsI=.png)
 
-  ![](/assets/4LOKW71ymbcrjHFq5GJ1DmfmrVP9kmRHuxDNlmCOjMU=.png)
 
   ![](/assets/bfmGjfdU1O3jJkCzzeSq8GsOqkUPVs5T7zG6DyHg9Y0=.png)
   * TD is trying to explain the data in the best possible way.
@@ -52,7 +49,6 @@
 
   ![](/assets/zVwscVofdLVe7ix6hPIRL7kITsv5ey8AItFeNw0IEWE=.png)
 
-  ![](/assets/3UYWJcU27MYqZe5R48xYDRgoFoyUTyU55foPNbdnWss=.png)
 
   ![](/assets/xReck_Nq2IeDOI3LOWntndu_wbI7PGGTmzK06UtspCc=.png)
 
@@ -69,7 +65,6 @@
 
   ![](/assets/eu450a2mYfrnevIxqzIRV6Qb_SGeQw0QTahdqA7w1iA=.png)
 
-  ![](/assets/-yLKl2IyXGh6KRPUm6nErhOkmQkHp4K-uNPiKgsKD0A=.png)
   * &#x20;What we talk about is just whether we do online or off-line updates and that means whether we immediately update our value function or whether we defer the updates of our value function until the end of the episode.
   * So what we're going to do is trying to come up with the best all of n and that's the goal to efficiently consider all n at once.
   ![](/assets/WL5A3FIUokfMQJUnooDvSqIoTsOrOqclt9B3LTqIh2A=.png)
@@ -82,7 +77,6 @@
 
   ![](/assets/dzpVaev66b-zPTrg1yJTZD8gzm7u3i_E6ib1j26MvJk=.png)
 
-  ![](/assets/2tLirFgoq6DF5smnYhV-f6_mckBXqscFyCACMM9pcOA=.png)
 
   ![](/assets/qAOqXjO_xorlsFmy3XCk-teqlnBbU3Kl3oEbChdDvDA=.png)
 

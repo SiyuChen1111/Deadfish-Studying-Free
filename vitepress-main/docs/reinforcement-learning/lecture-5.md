@@ -28,13 +28,12 @@
 
 ![](/assets/TZhf8vdXHJC3ulhPQGzgpWqn70WUJEBoj0bt0t74ED0=.png)
 
-![](/assets/0SoCarWa7A6F20S71sbMmZ_hy5nhGI_XP7B7tk6MFmE=.png)
 
 ![](/assets/Jy_QlscjW5lovmUGUbAigXQO7wngzQJkhHq4DT0eAH0=.png)
 
 ![](/assets/Jy_QlscjW5lovmUGUbAigXQO7wngzQJkhHq4DT0eAH0=.png)
 
-![](../assets/reinforcement-learning/assets/reinforcement-learning/Jy_QlscjW5lovmUGUbAigXQO7wngzQJkhHq4DT0eAH0=.png "妙啊哇趣。")
+![](/assets/Jy_QlscjW5lovmUGUbAigXQO7wngzQJkhHq4DT0eAH0=.png "妙啊哇趣。")
 
 ![](/assets/jAuSibr4RQghKJSxuWU0e7MEz-mkJIipLkWDb2BbPGA=.png)
 

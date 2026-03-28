@@ -37,7 +37,6 @@
   ![](/assets/rh7kqacRDL2yhgxELtrsXm4hzabKvw64lM6FM2rQJo0=.png)
 * Markov Decision Process
 
-  ![](/assets/6MjRFgU-DDuMmizUAs0rQg50JPIsNsInWpSaf182RYs=.png)
 * Policies
 
   ![](/assets/x6QFUnd1mnlyPlOvNwknFwuCFt7vZyw-V4T4_HsS0m8=.png)

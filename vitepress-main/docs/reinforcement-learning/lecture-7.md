@@ -18,7 +18,6 @@
 
 ![](/assets/ldQLAJ7yvfcuKVNfA-FC9fjKLx5OuKNdUd3cXGVki1s=.png)
 
-![](/assets/-O-XiqPF83IRGLiFIRxQUcBlhYW3ewao2vt06xCdFTY=.png)
 
 * We don't know where we start.
 * What does the regret look like?
