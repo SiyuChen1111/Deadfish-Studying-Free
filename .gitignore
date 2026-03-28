@@ -1,22 +1,42 @@
 # Dependencies
 node_modules/
+dist/
+.vitepress/dist/
+
+# Build output
+.vitepress/cache/
+
+# Editor
+.DS_Store
+*.suo
+*.swp
 
 # Logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # OS
-.DS_Store
+.DS_Store?
+.DS_Store?
+.*
 Thumbs.db
+Thumbs.db:encrypt?
 
 # IDE
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
 
 # Environment
 .env
+.env.local
+.env.*.local
 
-# Build output
-dist/
-.vitepress/dist/
-.vitepress/cache/
+# VitePress specific
+.vitepress/temp/

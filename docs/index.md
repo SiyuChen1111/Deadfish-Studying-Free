@@ -2,10 +2,10 @@
 layout: home
 ---
 
-# Study Notes
+# Deadfish🐟 Studying Free
 
 Welcome to my personal study notes collection.
 
-## Subjects
+## Courses
 
 - [Reinforcement Learning]() - 7 lectures on RL foundations

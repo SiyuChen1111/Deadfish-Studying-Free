@@ -1,27 +1,26 @@
-# My Study Notes
+# Deadfish🐟 Studying Free
 
 Personal study notes hosted on GitHub Pages.
 
-## 🌐 Live Website
+## 🌐 访问网站
 
-[https://siyuchen1111.github.io/My-Study-Notes/](https://siyuchen1111.github.io/My-Study-Notes/)
+点击链接访问：[https://siyuchen1111.github.io/My-Study-Notes/](https://siyuchen1111.github.io/My-Study-Notes/)
 
 ## 📁 Project Structure
 
 ```
 My-Study-Notes/
-├── vitepress-main/       # VitePress website source
-│   ├── docs/             # Documentation content
-│   ├── .github/          # GitHub Actions workflows
-│   └── package.json      # Dependencies
-└── Reinforce Learning/   # Source notes (archived)
+├── docs/                    # VitePress documentation content
+│   ├── assets/              # Images and static files
+│   ├── reinforcement-learning/  # RL lecture notes
+│   └── index.md             # Homepage
+├── .github/workflows/       # GitHub Actions for deployment
+└── package.json             # Dependencies
 ```
 
 ## 🚀 Local Development
 
 ```bash
-cd vitepress-main
-
 # Install dependencies
 npm install
 
@@ -32,11 +31,11 @@ npm run docs:dev
 npm run docs:build
 ```
 
-## 📝 Adding New Subjects
+## 📝 Adding New Courses
 
-1. Create a new folder in `vitepress-main/docs/`
+1. Create a new folder in `docs/`
 2. Add markdown files (e.g., `lecture-1.md`)
-3. Update `vitepress-main/docs/subjects.md`
+3. Update `docs/index.md` to link the new course
 4. Commit and push - GitHub Actions will deploy automatically
 
 ## 🔗 Links

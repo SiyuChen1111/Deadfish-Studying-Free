@@ -35,17 +35,15 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        working-directory: ./vitepress-main
         run: npm ci
 
       - name: Build VitePress
-        working-directory: ./vitepress-main
         run: npm run docs:build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: vitepress-main/docs/.vitepress/dist
+          path: docs/.vitepress/dist
 
   deploy:
     environment:
