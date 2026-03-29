@@ -38,6 +38,7 @@ export default defineConfig({
           text: 'Machine Learning Derivation',
           items: [
             { text: 'Variational Inference', link: '/machine-learning-derivation/variational-inference' },
+            { text: 'VI Paper Related', link: '/machine-learning-derivation/variational-inference-paper-related' },
           ]
         }
       ]
