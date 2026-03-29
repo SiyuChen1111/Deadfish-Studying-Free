@@ -1,0 +1,52 @@
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  title: 'Deadfish🐟 Studying Free',
+  description: 'Personal study notes collection',
+  markdown: {
+    math: true
+  },
+  themeConfig: {
+    sidebar: {
+      '/reinforcement-learning/': [
+        {
+          text: 'Reinforcement Learning',
+          items: [
+            { text: 'Overview', link: '/reinforcement-learning/README' },
+            { text: 'Lecture 1: Intro to RL', link: '/reinforcement-learning/lecture-1' },
+            { text: 'Lecture 2', link: '/reinforcement-learning/lecture-2' },
+            { text: 'Lecture 3', link: '/reinforcement-learning/lecture-3' },
+            { text: 'Lecture 4', link: '/reinforcement-learning/lecture-4' },
+            { text: 'Lecture 5', link: '/reinforcement-learning/lecture-5' },
+            { text: 'Lecture 6', link: '/reinforcement-learning/lecture-6' },
+            { text: 'Lecture 7', link: '/reinforcement-learning/lecture-7' },
+            { text: 'Agents', link: '/reinforcement-learning/AGENTS' },
+          ]
+        }
+      ],
+      '/principle-of-cognitive-behavioral-computing/': [
+        {
+          text: 'Principle of Cognitive Behavioral Computing',
+          items: [
+            { text: 'Lecture 1', link: '/principle-of-cognitive-behavioral-computing/lecture-1' },
+            { text: 'Lecture 2', link: '/principle-of-cognitive-behavioral-computing/lecture-2' },
+          ]
+        }
+      ],
+      '/machine-learning-derivation/': [
+        {
+          text: 'Machine Learning Derivation',
+          items: [
+            { text: 'Variational Inference', link: '/machine-learning-derivation/variational-inference' },
+          ]
+        }
+      ]
+    },
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Reinforcement Learning', link: '/reinforcement-learning/README' },
+      { text: 'Cognitive Behavioral Computing', link: '/principle-of-cognitive-behavioral-computing/lecture-1' },
+      { text: 'ML Derivation', link: '/machine-learning-derivation/variational-inference' }
+    ]
+  }
+})
