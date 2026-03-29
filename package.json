@@ -8,8 +8,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "vitepress": "^1.6.4",
-    "markdown-it-mathjax3": "^4.3.2"
+    "vitepress": "^1.6.4"
   },
   "optionalDependencies": {
     "@rollup/rollup-darwin-arm64": "^4.60.0"
