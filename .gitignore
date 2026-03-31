@@ -3,3 +3,21 @@ Agent.md
 
 # 源笔记目录（原始文件，已转换为 docs/ 中的格式）
 my-notes/
+
+# Node.js dependencies
+node_modules/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# VitePress build artifacts
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+docs/.vitepress/theme/
+
