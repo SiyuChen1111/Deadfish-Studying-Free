@@ -30,6 +30,7 @@ export default defineConfig({
           items: [
             { text: 'Lecture 1', link: '/principle-of-cognitive-behavioral-computing/lecture-1' },
             { text: 'Lecture 2', link: '/principle-of-cognitive-behavioral-computing/lecture-2' },
+            { text: 'Lecture 3', link: '/principle-of-cognitive-behavioral-computing/lecture-3' },
           ]
         }
       ],
