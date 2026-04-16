@@ -50,7 +50,8 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Reinforcement Learning', link: '/reinforcement-learning/README' },
       { text: 'Cognitive Behavioral Computing', link: '/principle-of-cognitive-behavioral-computing/lecture-1' },
-      { text: 'ML Derivation', link: '/machine-learning-derivation/variational-inference' }
+      { text: 'ML Derivation', link: '/machine-learning-derivation/variational-inference' },
+      { text: 'Hand-coded Play', link: '/BiLSTM-AE' }
     ]
   }
 })
