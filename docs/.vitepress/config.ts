@@ -44,6 +44,16 @@ export default defineConfig({
             { text: 'EM Algorithm', link: '/machine-learning-derivation/EM' },
           ]
         }
+      ],
+      '/hand-coded-play/': [
+        {
+          text: 'Hand-coded Play',
+          items: [
+            { text: 'BiLSTM-AE', link: '/hand-coded-play/BiLSTM-AE' },
+            { text: 'Ridge Regression', link: '/hand-coded-play/Ridge-Regression' },
+            { text: 'GRU', link: '/hand-coded-play/GRU' },
+          ]
+        }
       ]
     },
     nav: [
@@ -51,7 +61,7 @@ export default defineConfig({
       { text: 'Reinforcement Learning', link: '/reinforcement-learning/README' },
       { text: 'Cognitive Behavioral Computing', link: '/principle-of-cognitive-behavioral-computing/lecture-1' },
       { text: 'ML Derivation', link: '/machine-learning-derivation/variational-inference' },
-      { text: 'Hand-coded Play', link: '/BiLSTM-AE' }
+      { text: 'Hand-coded Play', link: '/hand-coded-play/GRU' }
     ]
   }
 })
