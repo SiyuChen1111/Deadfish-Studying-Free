@@ -54,6 +54,15 @@ export default defineConfig({
             { text: 'GRU', link: '/hand-coded-play/GRU' },
           ]
         }
+      ],
+      '/theoretical-neuroscience/': [
+        {
+          text: 'Theoretical Neuroscience',
+          items: [
+            { text: 'Overview', link: '/theoretical-neuroscience/README' },
+            { text: 'Neural Manifolds & ANN', link: '/theoretical-neuroscience/neural-manifolds-ann/' },
+          ]
+        }
       ]
     },
     nav: [
@@ -61,7 +70,8 @@ export default defineConfig({
       { text: 'Reinforcement Learning', link: '/reinforcement-learning/README' },
       { text: 'Cognitive Behavioral Computing', link: '/principle-of-cognitive-behavioral-computing/lecture-1' },
       { text: 'ML Derivation', link: '/machine-learning-derivation/variational-inference' },
-      { text: 'Hand-coded Play', link: '/hand-coded-play/GRU' }
+      { text: 'Hand-coded Play', link: '/hand-coded-play/GRU' },
+      { text: 'Theoretical Neuroscience', link: '/theoretical-neuroscience/README' }
     ]
   }
 })

@@ -15,6 +15,7 @@ My-Study-Notes/
 │   ├── reinforcement-learning/      # RL lecture notes
 │   ├── principle-of-cognitive-behavioral-computing/  # Cognitive Behavioral Computing notes
 │   ├── machine-learning-derivation/  # Machine Learning formula derivations
+│   ├── theoretical-neuroscience/     # Theoretical Neuroscience notes
 │   └── index.md             # Homepage
 ├── .github/workflows/       # GitHub Actions for deployment
 ├── vercel.json              # Vercel deployment config
@@ -36,6 +37,10 @@ My-Study-Notes/
 ### Machine Learning Derivation [studying]
 - Mathematical foundations and formula derivations
 - Topics: Variational Inference, EM Algorithm, Bayesian Inference
+
+### Theoretical Neuroscience [studying]
+- Neural representation geometry and NeuroAI
+- Topics: Neural manifolds, manifold capacity, population coding, ANN-brain comparisons
 
 
 ## 🚀 Deployment
