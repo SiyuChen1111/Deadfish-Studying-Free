@@ -63,6 +63,14 @@ export default defineConfig({
             { text: 'Neural Manifolds & ANN', link: '/theoretical-neuroscience/neural-manifolds-ann/' },
           ]
         }
+      ],
+      '/daniel-dennett-autobiography/': [
+        {
+          text: 'Daniel Dennett Autobiography',
+          items: [
+            { text: 'Overview', link: '/daniel-dennett-autobiography/README' }
+          ]
+        }
       ]
     },
     nav: [
@@ -71,7 +79,8 @@ export default defineConfig({
       { text: 'Cognitive Behavioral Computing', link: '/principle-of-cognitive-behavioral-computing/lecture-1' },
       { text: 'ML Derivation', link: '/machine-learning-derivation/variational-inference' },
       { text: 'Hand-coded Play', link: '/hand-coded-play/GRU' },
-      { text: 'Theoretical Neuroscience', link: '/theoretical-neuroscience/README' }
+      { text: 'Theoretical Neuroscience', link: '/theoretical-neuroscience/README' },
+      { text: 'Dennett Notes', link: '/daniel-dennett-autobiography/README' }
     ]
   }
 })

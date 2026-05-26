@@ -13,3 +13,4 @@ hero:
 - [Cognitive Behavioral Computing](/principle-of-cognitive-behavioral-computing/lecture-1) - Principle of Cognitive Behavioral Computing
 - [Machine Learning Derivation](/machine-learning-derivation/variational-inference) - Machine Learning formula derivations
 - [Theoretical Neuroscience](/theoretical-neuroscience/README) - Neural manifolds, population geometry, and NeuroAI notes
+- [我一直在想：丹尼尔·丹尼特唯一自传](/daniel-dennett-autobiography/README) - 丹尼特思想与哲学笔记
