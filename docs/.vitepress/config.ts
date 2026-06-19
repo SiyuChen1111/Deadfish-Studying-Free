@@ -71,6 +71,15 @@ export default defineConfig({
             { text: 'Overview', link: '/daniel-dennett-autobiography/README' }
           ]
         }
+      ],
+      '/research-papers/': [
+        {
+          text: 'Research Papers',
+          items: [
+            { text: 'Overview', link: '/research-papers/README' },
+            { text: 'Chung & Abbott 2021', link: '/research-papers/Chung_&_Abbott_2021' },
+          ]
+        }
       ]
     },
     nav: [
@@ -80,7 +89,8 @@ export default defineConfig({
       { text: 'ML Derivation', link: '/machine-learning-derivation/variational-inference' },
       { text: 'Hand-coded Play', link: '/hand-coded-play/GRU' },
       { text: 'Theoretical Neuroscience', link: '/theoretical-neuroscience/README' },
-      { text: 'Dennett Notes', link: '/daniel-dennett-autobiography/README' }
+      { text: 'Dennett Notes', link: '/daniel-dennett-autobiography/README' },
+      { text: 'Research Papers', link: '/research-papers/README' }
     ]
   }
 })
