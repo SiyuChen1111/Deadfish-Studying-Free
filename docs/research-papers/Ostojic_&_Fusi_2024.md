@@ -46,7 +46,7 @@ This is important because it links three levels:
 
 **task structure → neural representation → computation**
 
-![Characterizing task structure](image-3.png)
+![Characterizing task structure](/assets/research-papers/image-3.png)
 
 ## 2. Unify population-level and single-neuron analyses
 
