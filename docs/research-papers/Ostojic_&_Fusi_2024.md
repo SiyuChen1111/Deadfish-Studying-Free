@@ -33,3 +33,86 @@ One major challenge of neuroscience is identifying structure in seemingly disorg
 
 - **Why This Distinction Matters**
     - Separating these two types of variables allows researchers to understand how much of our brain activity is a direct reflection of the world (external) versus how much is a product of our own internal processing, expectations, and biological state (internal). It helps in mapping out how the brain balances "bottom-up" information from the senses with "top-down" control from internal cognitive processes.
+---
+The paper’s main contribution is **a conceptual framework for understanding how “structure” in neural systems supports computation**. It is a review/theoretical synthesis rather than a new empirical experiment.
+
+The authors’ core idea is that neural activity may look messy at the single-neuron level—especially because many neurons show **mixed selectivity**—but this does not mean the system is unstructured. Instead, structure can be found at two complementary levels: **geometry** and **modularity**. They argue that these two forms of structure can be studied not only in neural activity, but also in neural connectivity. 
+
+## 1. A common language for “task structure”
+
+The paper first formalizes a behavioral task as a mapping from **task variables** to **behavioral outputs**. For example, in perceptual decision-making, the relevant variable might be motion coherence or face morph level; in context-dependent decision-making, the correct response depends not only on the stimulus but also on context. This framing lets the authors ask: what transformation must neural activity perform to turn sensory inputs into the correct output? 
+
+This is important because it links three levels:
+
+**task structure → neural representation → computation**
+
+![Characterizing task structure](image-3.png)
+
+## 2. Unify population-level and single-neuron analyses
+
+A key contribution is the use of an **activity matrix** to show that two common approaches are actually complementary views of the same data.
+
+
+If you look at the **columns** of the activity matrix, each condition becomes a point in neural state space. This gives you **population geometry**: whether representations are high-dimensional, linearly separable, disentangled, abstract, and so on. If you look at the **rows**, each neuron becomes a response profile across conditions. This gives you **selectivity/modularity**: whether neurons form functional groups or clusters. 
+
+This is a useful synthesis because it bridges two traditions:
+
+Population geometry asks:
+**How are task conditions arranged in neural state space?**
+
+Single-neuron/modularity analysis asks:
+**Are neurons organized into functional categories?**
+
+The paper argues that both are needed.
+
+## 3. Clarify the computational meaning of geometry
+
+The authors emphasize that representational geometry has direct computational implications. For example, high-dimensional random-like representations can support many possible classifications and flexible readouts, whereas low-dimensional or disentangled representations can support abstraction and generalization. In Figure 2, they explicitly contrast high-dimensional representations that favor flexibility with low-dimensional or disentangled representations that favor abstraction and generalization. 
+![Figure2_Characterizing structure in neural activity](/assets/research-papers/image-4.png)
+
+This is especially relevant for cognitive neuroscience because it gives a way to interpret neural population structure functionally, rather than just descriptively.
+
+## 4. Extend the same framework from activity to connectivity
+
+One of the paper’s most important contributions is that it applies the same geometry/modularity logic to **connectivity**. The authors represent network connectivity as a **weight matrix**, analogous to the activity matrix. Columns of this matrix correspond to input or output vectors; rows correspond to neurons’ full patterns of input and output weights. 
+
+This means you can ask geometry/modularity questions about connectivity too:
+
+**Connectivity geometry:**
+How are input and readout directions arranged in neural state space?
+
+**Connectivity modularity:**
+Do neurons form clusters based on their input/output weight profiles?
+
+This matters because some computational structure may be invisible in activity but visible in connectivity.
+
+![Characterizing connectivity structure](/assets/research-papers/image-5.png)
+
+## 5. Link different computations to different kinds of structure
+
+The paper reviews three classes of computations and explains what kinds of structure support them.
+
+For **random input classification**, flexible outputs can arise from high-dimensional, random mixed selectivity, with little modularity. This is useful when the goal is to support many arbitrary classifications. 
+
+For **structured inputs and generalization**, the key structure is more abstract or disentangled geometry. The network should represent latent task variables in a way that allows linear readouts to generalize across irrelevant variations. 
+
+For **context-dependent readouts**, the crucial structure may lie in connectivity rather than obvious neural selectivity. In some trained networks, modularity is not visible in neural activity, but the needed structure appears in correlations between input and output weights. The authors argue that such connectivity structure is a fundamental constraint for implementing context-dependent computation. 
+![Connectivity structure in context-dependent decision-making](/assets/research-papers/image-6.png)
+## 6. An important distinction: activity modularity is not always necessary
+
+A subtle but important contribution is that the paper argues against a simple view where functional modules must always appear as clearly separable groups of neurons in activity. In context-dependent tasks, modularity may appear in **connectivity space** even when neural activity looks highly mixed and non-modular. 
+
+This helps explain why neural recordings often show mixed selectivity: mixed activity does not imply computational randomness. The relevant structure may be hidden in population geometry or in connectivity.
+
+## 7. A roadmap for future work
+
+The paper ends by proposing that future neuroscience should relate functional structure to biological structure: cell types, gene expression, physiology, connectivity, and learning history. It also raises the question of whether trained artificial networks reveal true computational constraints or artifacts of specific training algorithms. 
+
+## Take-home message
+
+The paper’s biggest contribution is this:
+
+To understand what a neural population computes, we should not only ask what individual neurons encode. We should analyze both the geometry and modularity of neural activity, and also the geometry and modularity of connectivity.
+
+
+
