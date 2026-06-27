@@ -4,6 +4,55 @@
 </div>
 
 ---
+## What's the contribution of this paper?
+
+1. **They bridge two views of neural computation.**
+   The paper connects the "cell-population" view, which studies functional subpopulations of neurons, with the "computation-through-dynamics" view, which studies low-dimensional neural trajectories. The authors explicitly ask how population structure and neural dynamics interact to shape computation.
+
+2. **They provide a method to test whether population structure is computationally necessary.**
+   Instead of only observing clustering in neural selectivity or connectivity, they use a resampling approach: they destroy non-random population structure while preserving lower-order connectivity statistics, then test whether the network can still perform the task. This turns the analysis from merely correlational into a stronger test of computational necessity.
+
+3. **They show that not all tasks need non-random population structure.**
+   For tasks such as perceptual decision-making, working memory, and multisensory decision-making, fully random population structure can be sufficient. But for tasks requiring flexible input-output mappings, such as contextual decision-making and delay-match-to-sample, non-random structure becomes necessary.
+
+4. **They explain population structure mechanistically through low-rank latent dynamics.**
+   The paper shows that low-rank RNNs can be reduced to low-dimensional nonlinear dynamical systems, and that the statistics of connectivity determine these latent dynamics. This gives a clear bridge between synaptic/connectivity structure and the geometry of neural activity.
+   ![Reducing low-rank networks to low-dimensional latent dynamics to explain computations in low-rank RNNS](/assets/research-papers/image-7.png)
+
+5. **They identify multi-population structure as a solution for flexible cognition.**
+   For flexible tasks, the authors show that connectivity can be described by a small number of subpopulations. In the contextual decision-making task, two populations were sufficient to recover near-trained performance, and similar logic applied to the delay-match-to-sample task.
+![Multi-population connectivity structure captures the computational requirements for context-dependent tasks](/assets/research-papers/image-8.png)
+6. **They propose gain modulation as the key mechanism.**
+   Multiple subpopulations allow external inputs to modulate the effective couplings between latent variables. In simpler words, the same network can flexibly reshape its internal dynamics depending on context.
+
+Overall, the paper's core contribution is showing that **population structure and neural dynamics are complementary, not competing, explanations**: dynamics determine computation, but structured subpopulations can be necessary to flexibly control those dynamics.
+
+---
+## What's the non-random population?
+In this paper, **"non-random population"** really means **non-random population structure**.
+
+It means that neurons are **not just a random cloud of mixed-selective units**. Instead, when each neuron is represented by its task selectivity or connectivity parameters, the neurons show **structured clustering or organized patterns** in that space.
+
+A simple way to understand it:
+
+**Random population structure:**
+Neurons all mix task variables in a roughly random way. If you plot them in a "selectivity space" or "connectivity space," they look like one smooth Gaussian-like cloud.
+
+**Non-random population structure:**
+Neurons still may be mixed-selective, but their mixed selectivity is **organized**. The cloud of neurons is not random; it may form clusters, elongated directions, or subgroups. The paper calls this **non-random mixed selectivity**: neurons tend to be clustered along multiple axes rather than being distributed isotropically/randomly.
+
+In the paper's connectivity analysis, a non-random population means that neurons can be divided into **subpopulations** with different statistical connectivity patterns. These subpopulations may not have very different average positions, but they have different **shapes and orientations** in connectivity space, meaning different covariance/overlap relationships among input, recurrent, and output connections.
+
+So the key point is:
+
+**Non-random population != one neuron represents only one task variable.**
+It means:
+
+**Neurons may still encode mixtures of variables, but the way they mix variables is structured, not arbitrary.**
+
+In Dubreuil et al. (2022), this structure matters especially for flexible tasks, such as contextual decision-making, where the same input may require different outputs depending on context. For those tasks, random structure was not enough; the network needed organized subpopulations to flexibly reshape its dynamics.
+
+---
 ## Low-rank RNNs: a practical guide
 
 ### **1. Why low-rank is a legitimate "replacement" for full-rank here, not a downgrade**
@@ -50,5 +99,3 @@ Finally, note there is also recent experimental work (Nature 2024, "Individual v
 ### **Bottom line**
 
 For exploring the decision-making process during flexible/context-switching tasks, a low-rank RNN is a well-justified and arguably superior method to a full-rank RNN: trained full-rank networks on these very tasks are already effectively low-rank, the low-rank form gives you an analytic reduction to collective variables and an explicit account of the gating/selection mechanism, and the framework's core result tells you that flexible switching specifically requires the multi-population structure you'd be modeling. Just plan for rank >= 2 with multiple populations, validate the minimal rank empirically given the known expressivity limits, and lean on the input-modulation vs. selection-vector-modulation distinction to characterize the switching mechanism.
-
-If you tell me the exact structure of your face-switching task (number of contexts, stimulus features, whether the rule is cued or internally inferred), I can sketch the minimal rank and population layout you'd likely need and which reference's setup is the closest template.
