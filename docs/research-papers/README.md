@@ -4,6 +4,11 @@ This section contains notes and summaries of research papers I've read.
 
 ## Papers
 
+### 2025
+
+- [Elucidating the Selection Mechanisms in Context-Dependent Computation Through Low-Rank Neural Network Modeling](./Zhang_2025) - Zhang, Y., Feng, J., & Min, B. (2025)
+  - A model-structure note explaining how low-rank RNNs implement context-dependent evidence selection through input modulation and selection-vector modulation.
+
 ### 2024
 
 - [Computational Role of Structure in Neural Activity and Connectivity](./Ostojic_&_Fusi_2024) - Ostojic, S., & Fusi, S. (2024)
