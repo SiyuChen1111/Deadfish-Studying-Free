@@ -24,12 +24,6 @@ My-Study-Notes/
 └── package.json             # Dependencies
 ```
 
-## ✍️ Notes Workflow
-
-- `my-notes/` stores notes that are still being organized
-- `docs/` stores notes that are already prepared for the website
-- A topic may be drafted in `my-notes/` first, then rewritten into a cleaner website-friendly structure later
-
 ## 📚 Courses
 
 ### Reinforcement Learning
@@ -49,7 +43,6 @@ My-Study-Notes/
 ### Theoretical Neuroscience [studying]
 - Neural representation geometry and NeuroAI
 - Topics: Neural manifolds, manifold capacity, population coding, ANN-brain comparisons
-- Includes a newly organized subsection on neural dynamics and computational modeling
 
 
 ## 🚀 Deployment
