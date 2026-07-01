@@ -10,6 +10,8 @@ Personal study notes hosted on Vercel.
 
 ```
 My-Study-Notes/
+├── my-notes/                # Working notes area before website-style cleanup
+│   └── notes/               # Source notes organized by topic
 ├── docs/                    # VitePress documentation content
 │   ├── assets/              # Images and static files
 │   ├── reinforcement-learning/      # RL lecture notes
@@ -21,6 +23,12 @@ My-Study-Notes/
 ├── vercel.json              # Vercel deployment config
 └── package.json             # Dependencies
 ```
+
+## ✍️ Notes Workflow
+
+- `my-notes/` stores notes that are still being organized
+- `docs/` stores notes that are already prepared for the website
+- A topic may be drafted in `my-notes/` first, then rewritten into a cleaner website-friendly structure later
 
 ## 📚 Courses
 
@@ -41,6 +49,7 @@ My-Study-Notes/
 ### Theoretical Neuroscience [studying]
 - Neural representation geometry and NeuroAI
 - Topics: Neural manifolds, manifold capacity, population coding, ANN-brain comparisons
+- Includes a newly organized subsection on neural dynamics and computational modeling
 
 
 ## 🚀 Deployment
