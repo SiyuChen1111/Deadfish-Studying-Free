@@ -61,6 +61,7 @@ export default defineConfig({
           items: [
             { text: 'Overview', link: '/theoretical-neuroscience/README' },
             { text: 'Neural Manifolds & ANN', link: '/theoretical-neuroscience/neural-manifolds-ann/' },
+            { text: 'Neural Dynamics and Computational Modeling', link: '/theoretical-neuroscience/neural-manifolds-ann/neural-dynamics-computational-modeling/' },
           ]
         }
       ],

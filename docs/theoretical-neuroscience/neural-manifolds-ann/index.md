@@ -1,5 +1,11 @@
 # Neural Manifolds & ANN
 
+## Sections
+
+- [Neural Dynamics and Computational Modeling](./neural-dynamics-computational-modeling/)
+
+---
+
 ## Talk Info
 
 - **Title:** Computing with Neural Manifolds

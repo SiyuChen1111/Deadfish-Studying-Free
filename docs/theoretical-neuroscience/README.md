@@ -5,3 +5,4 @@ This section collects notes on neural representation geometry, population coding
 ## Notes
 
 - [Neural Manifolds & ANN](/theoretical-neuroscience/neural-manifolds-ann/) — SueYeon Chung on manifold geometry, readout capacity, and NeuroAI
+- [Neural Dynamics and Computational Modeling](/theoretical-neuroscience/neural-manifolds-ann/neural-dynamics-computational-modeling/) — recurrent circuits, continuous attractors, and grid-cell models
