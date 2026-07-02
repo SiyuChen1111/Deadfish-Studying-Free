@@ -32,8 +32,8 @@ Many brain circuits are not organized as one-way pipelines. Neurons send signals
 
 That is why recurrent neural networks are a natural starting point for studying neural dynamics.
 
-![](./Pasted image 20260701133311.png)
-![](./Pasted image 20260701133504.png)
+![](./figure-01.png)
+![](./figure-02.png)
 
 ---
 
@@ -65,9 +65,9 @@ Each neuron's activity changes over time based on:
 
 This gives a simple but powerful model of how structured activity patterns can emerge from local interaction rules.
 
-![](./Pasted image 20260701134136.png)
-![](./Pasted image 20260701134310.png)
-![](./Pasted image 20260701134641.png)
+![](./figure-03.png)
+![](./figure-04.png)
+![](./figure-05.png)
 
 ---
 
@@ -86,7 +86,7 @@ The standard condition is:
 
 This pattern is often called **Mexican-hat connectivity**. It allows one localized active region to survive while preventing the whole network from lighting up.
 
-![](./Pasted image 20260701135112.png)
+![](./figure-06.png)
 
 ---
 
@@ -185,12 +185,12 @@ Another important example in neural dynamics is the **Hopfield network**. It was
 - those states can function like memory,
 - and network structure can explain computation at the population level.
 
-![](./Pasted image 20260701135409.png)
-![](./Pasted image 20260701135421.png)
-![](./Pasted image 20260701135517.png)
-![](./Pasted image 20260701135618.png)
-![](./Pasted image 20260701135827.png)
-![](./Pasted image 20260701140006.png)
+![](./figure-07.png)
+![](./figure-08.png)
+![](./figure-09.png)
+![](./figure-10.png)
+![](./figure-11.png)
+![](./figure-12.png)
 
 ---
 
@@ -204,8 +204,8 @@ Another important example in neural dynamics is the **Hopfield network**. It was
 
 This is why neural dynamics is so central in computational neuroscience: it connects circuit structure, mathematical explanation, and cognitive function in one framework.
 
-![](./Pasted image 20260701140200.png)
-![](./Pasted image 20260701140258.png)
-![](./Pasted image 20260701140312.png)
-![](./Pasted image 20260701141556.png)
-![](./Pasted image 20260701141611.png)
+![](./figure-13.png)
+![](./figure-14.png)
+![](./figure-15.png)
+![](./figure-16.png)
+![](./figure-17.png)
