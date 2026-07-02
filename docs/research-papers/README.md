@@ -4,6 +4,11 @@ This section contains notes and summaries of research papers I've read.
 
 ## Papers
 
+### 2026
+
+- [Interpretable Abstractions of Artificial Neural Networks Predict Behavior and Neural Activity During Human Information Gathering](./DAmbrogio_2026) - D’Ambrogio, S., Grohn, J., Khalighinejad, N., Mattar, M. G., Hunt, L., & Rushworth, M. F. S. (2026)
+  - A note on how a smooth neural network can be turned into a readable rule for why people keep sampling, switch targets, or stop gathering evidence.
+
 ### 2025
 
 - [Elucidating the Selection Mechanisms in Context-Dependent Computation Through Low-Rank Neural Network Modeling](./Zhang_2025) - Zhang, Y., Feng, J., & Min, B. (2025)

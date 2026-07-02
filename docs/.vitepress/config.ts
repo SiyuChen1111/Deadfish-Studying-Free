@@ -78,6 +78,7 @@ export default defineConfig({
           text: 'Research Papers',
           items: [
             { text: 'Overview', link: '/research-papers/README' },
+            { text: 'D’Ambrogio et al. 2026', link: '/research-papers/DAmbrogio_2026' },
             { text: 'Zhang et al. 2025', link: '/research-papers/Zhang_2025' },
             { text: 'Ostojic & Fusi 2024', link: '/research-papers/Ostojic_&_Fusi_2024' },
             { text: 'Dubreuil et al. 2022', link: '/research-papers/Dubreuil_2022' },
