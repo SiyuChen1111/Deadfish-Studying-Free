@@ -6,6 +6,9 @@ This section contains notes and summaries of research papers I've read.
 
 ### 2026
 
+- [Interpretable Compositional Computation with Recurrent Neural Networks](./Pezon_Meegen_2026) - Pezon, L., & van Meegen, A. (2026)
+  - A note on how shared low-dimensional dynamical components can coexist with task-dependent activity, and how this reframes our Face-Switch stage_results_v5 FINDR interpretation.
+
 - [Interpretable Abstractions of Artificial Neural Networks Predict Behavior and Neural Activity During Human Information Gathering](./DAmbrogio_2026) - D’Ambrogio, S., Grohn, J., Khalighinejad, N., Mattar, M. G., Hunt, L., & Rushworth, M. F. S. (2026)
   - A note on how a smooth neural network can be turned into a readable rule for why people keep sampling, switch targets, or stop gathering evidence.
 
