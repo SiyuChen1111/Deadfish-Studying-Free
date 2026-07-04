@@ -1,200 +1,409 @@
-# Pezon & van Meegen (2026): Interpretable Compositional Computation with RNNs
-
 <div class="csl-bib-body" style="line-height: 2; margin-left: 2em; text-indent:-2em;">
-  <div class="csl-entry">Pezon, L., &amp; van Meegen, A. (2026). <i>Interpretable compositional computation with recurrent neural networks</i>. bioRxiv. <a href="https://doi.org/10.64898/2026.06.23.733979">https://doi.org/10.64898/2026.06.23.733979</a></div>
+  <div class="csl-entry">Pezon, L., &amp; Meegen, A. van. (2026). <i>Interpretable compositional computation with recurrent neural networks</i> (p. 2026.06.23.733979). bioRxiv. <a href="https://doi.org/10.64898/2026.06.23.733979">https://doi.org/10.64898/2026.06.23.733979</a></div>
+  <span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.64898%2F2026.06.23.733979&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=preprint&amp;rft.title=Interpretable%20compositional%20computation%20with%20recurrent%20neural%20networks&amp;rft.rights=%C2%A9%202026%2C%20Posted%20by%20openRxiv.%20This%20pre-print%20is%20available%20under%20a%20Creative%20Commons%20License%20(Attribution%204.0%20International)%2C%20CC%20BY%204.0%2C%20as%20described%20at%20http%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby%2F4.0%2F&amp;rft.description=Flexible%20cognition%20utilizes%20reusable%20components%20to%20enable%20rapid%20adaptation%20of%20behavior%20to%20different%20contexts%20or%20tasks.%20Analysis%20of%20artificial%20neural%20networks%20trained%20on%20multiple%20tasks%20suggested%20that%20this%20compositionality%20is%20supported%20by%20dynamical%20structures%20which%20are%20shared%20and%20re-used%20across%20tasks.%20However%2C%20the%20nature%20of%20these%20shared%20components%2C%20and%20how%20they%20can%20be%20used%20in%20a%20task-dependent%20manner%2C%20remained%20unclear.%20Here%2C%20we%20develop%20a%20theory%20of%20interpretable%20compositional%20computation%20based%20on%20shared%20dynamical%20structures%20in%20the%20low-dimensional%20latent%20space%20of%20low-rank%20recurrent%20neural%20networks.%20We%20show%20that%20these%20shared%20latent%20components%20are%20not%20immediately%20visible%20in%20the%20neural%20activity%2C%20and%20are%20thus%20compatible%20with%20task-dependent%20activity.%20We%20identify%20hallmarks%20of%20shared%20latent%20components%20both%20in%20the%20connectivity%20statistics%20and%20the%20neural%20representations.%20These%20hallmarks%20yield%20testable%20predictions%20for%20the%20network%E2%80%99s%20response%20to%20specific%20perturbation%20experiments.%20Finally%2C%20we%20identify%20distinct%20loci%20where%20task-dependence%20can%20enter%20the%20computation%2C%20allowing%20us%20to%20characterize%20qualitatively%20different%20solutions%20to%20compositional%20tasks.%20In%20summary%2C%20our%20theory%20provides%20a%20mechanistic%20understanding%20and%20testable%20hallmarks%20of%20compositional%20computation%20via%20shared%20components%20in%20low-rank%20networks.&amp;rft.identifier=urn%3Adoi%3A10.64898%2F2026.06.23.733979&amp;rft.aufirst=Louis&amp;rft.aulast=Pezon&amp;rft.au=Louis%20Pezon&amp;rft.au=Alexander%20van%20Meegen&amp;rft.date=2026-06-29&amp;rft.language=en"></span>
 </div>
 
+![Compositional computation using shared components in low-rank RNNS.](/assets/research-papers/image-17.png)
 ---
+## 1. Core question of the paper
 
-## Why I read this paper
+The paper asks: **How can one recurrent neural network solve many related tasks by reusing the same computational components, while still showing task-dependent neural activity?**
 
-I read this paper because it gives a useful language for interpreting our current Face-Switch FINDR results in `stage_results_v5`. The main question is not simply whether Arrangement A and Arrangement B produce different trajectories. The sharper question is:
+The authors’ answer is: compositional computation can be understood as **shared dynamical structures in the low-dimensional latent space of low-rank RNNs**. These shared components may not be obvious in raw neural activity, but they leave detectable signatures in connectivity statistics and perturbation responses. 
 
-**Can two arrangements look different in neural state space while still reusing the same low-dimensional evidence-to-choice computation?**
+A good one-sentence summary:
 
-This paper says yes, and it explains how to test that idea more carefully.
-
----
-
-## One-sentence takeaway
-
-The paper argues that flexible behavior can reuse shared low-dimensional dynamical components, even when the recorded neural activity looks task-dependent or context-dependent.
-
-For our project, this means Arrangement A/B trajectory differences should not automatically be interpreted as two separate mechanisms. They may instead reflect different surface expressions of a shared latent computation.
+> The same latent dynamical motif can be reused across tasks, while task-specific inputs and readouts make the observed neural activity and behavior task-dependent.
 
 ---
 
-## Paper conclusion 1: task-dependent activity can coexist with shared latent computation
+## 2. Key concepts you need before reading the paper
 
-### What the paper concludes
+### Low-rank RNN
+> Quick start:https://adrian-valente.github.io/2022/06/01/low-rank-summary.html#fn:1
 
-A shared latent dynamical component does not have to appear as identical neural activity across tasks. Neural activity can remain task-dependent because task information can shift the population activity in directions that do not change the core latent variables.
+The network has many neurons, but its recurrent connectivity is constrained to be low-rank:
 
-In simpler terms: two tasks can look different on the surface while still using the same underlying computational machinery.
+$$
+W_{rec}=\frac{1}{N}UV^\top
+$$
 
-### What this gives us for `stage_results_v5`
+This means the high-dimensional population activity (r(t)) can be described by a small number of latent factors:
 
-This directly helps interpret our Arrangement A/B results. In `main_fig1_cumulative_trajectory_over_flow.pdf`, Arrangement A and Arrangement B are not identical, but their choice-related trajectories and overall flow-field organization look similar.
+$$
+\lambda(t)=\frac{1}{N}V^\top r(t)
+$$
 
-So the better interpretation is not:
+The important point is that the network’s computation is not analyzed neuron by neuron, but through low-dimensional latent dynamics and output flow-fields, (\psi_{rec}) and (\psi_{out}). The authors explicitly state that the network dynamics and output are entirely determined by these low-dimensional flow-fields. 
+![An illustration of the connectivity space for a rank-one RNN. From (Dubreuil et al. 2022).](/assets/research-papers/image-14.png)
+### Flow-field
 
-> Arrangement A and B must use completely different mechanisms.
+A **flow-field** tells you how the latent state moves over time. Intuitively:
 
-A more careful interpretation is:
+$$
+\text{current latent state} \rightarrow \text{direction of movement}
+$$
 
-> Arrangement changes the location or expression of the neural state, while the evidence-to-choice computation may still be partly shared.
+For example, in a memory task, the flow-field may push activity toward a stable memory state.
 
-This supports the current v5 story: arrangement may act like a context-state offset, while cumulative evidence organizes the main choice trajectory.
+### Autonomous vs input-driven dynamics
 
----
+The recurrent flow-field is decomposed into:
 
-## Paper conclusion 2: the shared component is best sought in low-dimensional dynamics, not raw activity
+$$
+\psi_{rec}(\lambda,s,c)=\psi^{(c)}*0(\lambda)+\psi*{in}(\lambda,s,c)
+$$
 
-### What the paper concludes
+where:
 
-The paper defines shared computation at the level of low-dimensional latent dynamics. It argues that the reusable component is the flow or dynamical rule in latent space, not necessarily the raw firing-rate pattern.
+* ($\psi_0$): autonomous dynamics, what the network does without stimulus input, such as maintaining a memory.
+* ($\psi_{in}$): input-driven dynamics, how stimulus input changes the latent state.
+* ($\psi_{out}$): readout dynamics, how latent state is transformed into output.
 
-### What this gives us for `stage_results_v5`
+The authors define **shared components** as autonomous dynamics that are the same across tasks:
 
-This makes FINDR especially relevant. Our v5 results are already built around inferred low-dimensional flow fields and trajectories. That means `main_fig1_cumulative_trajectory_over_flow.pdf` is not just a visualization. It is the right object for asking whether Arrangement A and B reuse a similar latent computation.
+$$
+\psi^{(c)}_0 \equiv \psi_0
+$$
 
-The useful next analysis is therefore:
+Task identity can then still affect the computation through the stimulus-driven part ($\psi_{in}$) or the output/readout ($\psi_{out}$). 
 
-- compare the Arrangement A and Arrangement B flow fields directly;
-- measure whether their arrows point in similar directions at matched positions;
-- measure whether their speed patterns are similar;
-- ask whether the same choice axis emerges under both arrangements.
+### Ring attractor
 
-This would turn a visual impression into a quantitative shared-computation test.
-
----
-
-## Paper conclusion 3: task dependence can enter at different places
-
-### What the paper concludes
-
-The paper separates task dependence into different possible locations:
-
-1. task/context can change the autonomous background dynamics;
-2. task/context can change how input pushes the system;
-3. task/context can change how the latent state is read out into behavior.
-
-This is useful because the same behavior can be produced by different internal solutions.
-
-### What this gives us for `stage_results_v5`
-
-This maps naturally onto our current figure set:
-
-- **cumulative evidence**: likely captures the global evidence-to-choice organization;
-- **momentary evidence**: useful for local input-push interpretation;
-- **two-channel input**: tests whether positive and negative evidence need separate channels;
-- **arrangement**: may change state position or local expression, without necessarily replacing the whole choice computation.
-
-This helps explain why `main_fig4_input_model_comparison_controls.pdf` is important. The cumulative evidence model performs best for latent task organization, while the two-channel models do not clearly improve the choice-axis projection. That suggests we do not currently need to assume two fully separate positive/negative evidence channels.
+A **ring attractor** is a continuous set of stable states arranged like a circle. It is useful for storing angles or directions. In the pro/anti memory task, the same ring attractor can store either the stimulus direction or its opposite direction, depending on the task. 
 
 ---
 
-## Paper conclusion 4: similar behavior is not enough to identify the mechanism
+## 3. Method notes
 
-### What the paper concludes
+### 3.1 General RNN setup
 
-The paper emphasizes that several different dynamical solutions can produce similar task behavior. Therefore, good performance or visually similar trajectories are not enough to prove one mechanism.
+The network receives two kinds of input:
 
-### What this gives us for `stage_results_v5`
+$$
+s(t): \text{time-varying stimulus}
+$$
 
-This is a caution for our interpretation. The v5 results support cumulative evidence as the best organizing variable, but they do not yet prove a unique mechanism.
+$$
+c: \text{constant task/context input}
+$$
 
-A careful claim would be:
+The RNN dynamics are:
 
-> The current v5 results support cumulative evidence as the strongest low-dimensional organizing variable for choice-related dynamics.
+$$
+\tau \frac{dr}{dt}=-r+\sigma(W_{rec}r+W_s s+W_c c+b)
+$$
 
-A claim that is too strong would be:
+and the output is a linear readout of firing rates:
 
-> We have proven the exact attractor mechanism used by the brain.
+$$
+y(t)=\frac{1}{N}W_{out}^\top r(t)
+$$
 
-The paper tells us to keep the first statement and avoid the second unless we add stronger tests.
-
----
-
-## Paper conclusion 5: perturbing context is a powerful way to test shared components
-
-### What the paper concludes
-
-The authors propose testing shared latent components by switching the task/context signal and looking at the geometry of the response. If a latent component is truly shared, the response should obey specific symmetry-like constraints.
-
-### What this gives us for `stage_results_v5`
-
-For our FINDR results, the analogous analysis would be a counterfactual flow-field test:
-
-1. take trajectories from Arrangement A;
-2. evaluate or roll them under Arrangement B's learned flow field;
-3. do the reverse direction, B under A;
-4. ask whether the two cross-arrangement transformations behave symmetrically.
-
-This would be a stronger test than simply comparing A and B plots side by side.
-
-A practical next step is to compute an **A/B shared-flow score**:
-
-- flow-direction cosine similarity;
-- speed-pattern correlation;
-- choice-axis preservation;
-- counterfactual rollout similarity.
-
-If these scores are high, we gain evidence for shared latent computation. If they are low, arrangement may be changing the dynamics more deeply.
+So the task input (c) is always present during the trial and tells the network which task rule to apply. 
 
 ---
 
-## How this changes my interpretation of the current v5 results
+### 3.2 Main modeling strategy
 
-Before reading this paper, it is tempting to describe our v5 result as:
+This paper is not mainly an ordinary “train RNN and inspect it” paper. Instead, the authors often **design target flow-fields** that implement specific computational solutions, then train low-rank networks to realize those flow-fields.
 
-> Arrangement A and B have different trajectories.
+Why? Because ordinary end-to-end training can find many different solutions to the same task. The authors call this **solution-space degeneracy**: different networks can solve the same task using different mechanisms. 
 
-After reading this paper, the better interpretation is:
+To control this, they introduce a target flow-field ($\psi^*$), then train the network’s flow-field ($\psi$) to match it using an auxiliary mean-squared-error loss. 
 
-> Arrangement A and B may occupy different regions or expressions of state space, but the cumulative-evidence-to-choice computation may still be shared at the latent-flow level.
+Their training procedure uses online SGD, L2 regularization, Gaussian weight diffusion, and input noise. Most networks use (N=1024) neurons, with (N=2048) for the eight-task example. 
 
-This makes our current result more interesting. The arrangement effect is not just a nuisance offset. It becomes a way to ask how the brain reuses a decision computation under different contextual states.
-
----
-
-## Concrete next analyses for our project
-
-### 1. Quantify shared flow across Arrangement A/B
-
-Use the cumulative FINDR flow fields from v5 and compute how similar the A and B vector fields are after alignment.
-
-Expected interpretation:
-
-- high similarity: supports shared latent computation;
-- low similarity: suggests arrangement-specific dynamics.
-
-### 2. Quantify trajectory similarity after removing arrangement offset
-
-Compare same-choice trajectories across arrangements after subtracting early-state or centroid offsets.
-
-This tests whether arrangement mainly shifts the trajectory location while preserving the choice-related shape.
-
-### 3. Run counterfactual arrangement rollouts
-
-Use the learned flow for Arrangement A on trajectories initialized from Arrangement B, and vice versa.
-
-This would directly test whether one arrangement's dynamics can support the other arrangement's choice trajectory.
-
-### 4. Keep momentary evidence as local input-push evidence
-
-The momentary model should remain useful, but mainly as a local input-effect view rather than the main global trajectory model.
-
-### 5. Treat two-channel results as sensitivity checks
-
-Since the two-channel models do not clearly outperform the signed 1D/cumulative versions, they are useful as controls but not currently the central story.
+Interpretation:
+They are not just asking, “What solution does training find?” They are asking, “What kinds of mechanistic solutions are possible, and how can we identify them?”
 
 ---
 
-## Final takeaway for the Face-Switch project
+### 3.3 End-to-end training control
 
-This paper helps turn our v5 result into a sharper mechanistic question:
+They also train two low-rank networks end-to-end on the pro/anti memory task with ranks (P=8) and (P=4). Because randomly initialized low-rank networks did not reliably converge, they first trained a full-rank network, truncated its recurrent connectivity using SVD, and then fine-tuned the low-rank network. 
 
-**Do Arrangement A and Arrangement B use different neural-state expressions of a shared low-dimensional evidence-to-choice computation?**
+Interpretation:
+This part asks whether their diagnostic tools still work when the true internal solution is not manually designed.
+![Identifying shared attractors in low-rank networks trained end-to-end.](/assets/research-papers/image-15.png)
+---
 
-The current v5 results are consistent with this possibility, especially because cumulative evidence organizes the choice dynamics well. But the claim needs stronger support from A/B flow-field similarity, offset-controlled trajectory similarity, and counterfactual rollout tests.
+### 3.4 Tasks used in the paper
+
+#### Pro/anti memory tasks
+
+The network sees a stimulus direction. In the **pro** task, it reports the same direction; in the **anti** task, it reports the opposite direction. The trial has context, stimulus, memory, and response periods. 
+
+This is the simplest example for testing whether a shared ring attractor can support two different task rules.
+
+#### Categorization tasks
+
+The categorization family has two task variables:
+
+$$
+c_{in}: \text{which input feature is relevant}
+$$
+
+$$
+c_{out}: \text{which output channel should report the answer}
+$$
+
+The network must categorize the relevant stimulus feature as positive or negative, then report the result in the selected output channel. 
+
+This task is more compositional because it combines two independent contextual factors.
+
+#### Eight-task ring-attractor family
+
+The authors also build a larger family of eight tasks: delay-pro, memory-pro, react-pro, delay-anti, memory-anti, react-anti, match-to-sample, and anti-match-to-sample. These tasks all involve angular information but differ in timing, memory demand, and matching rule. 
+
+---
+
+## 4. Two major analysis methods
+
+## Method 1: Connectivity-statistics test
+
+![Shared components constrain network connectivity statistics.](/assets/research-papers/image-16.png)
+
+The authors ask: if two tasks share the same autonomous latent dynamics, what should be true about the network connectivity?
+
+They show that the autonomous dynamics can be rewritten as something like a one-hidden-layer MLP. For each neuron, task input changes an **effective bias**:
+
+$$
+\beta_i^{(c)} = w_i^c{}^\top c + b_i
+$$
+
+Then each neuron can be represented by a task-dependent parameter point:
+
+$$
+\theta_i^{(c)}=(u_i,\beta_i^{(c)},\nu_i^{(c)})
+$$
+
+If two tasks share autonomous dynamics, then the two point-clouds of neuron parameters should be statistically indistinguishable. 
+
+### How they test it
+
+They train a nonlinear classifier to predict whether a neuron-parameter point came from task (c) or task (c'). If the classifier performs at chance level, the two distributions look the same. If AUC is high, the two tasks likely use different autonomous dynamics. 
+
+Interpretation rule:
+
+$$
+\text{AUC near }0.5 \Rightarrow \text{compatible with shared autonomous dynamics}
+$$
+
+$$
+\text{High AUC} \Rightarrow \text{evidence for non-shared autonomous dynamics}
+$$
+
+This is powerful in artificial networks because the connectivity is known, but it is less directly applicable to animal neural data because synaptic connectivity is usually unavailable.
+
+---
+
+## Method 2: Task-input perturbation and RSM symmetry
+
+Because connectivity is usually not accessible experimentally, the authors propose a perturbation-based method using neural activity.
+
+The idea:
+
+1. Put the network in a memory attractor state for task (c').
+2. During the memory period, switch the task input from (c') to (c).
+3. Let the network relax to a new state.
+4. Compare this perturbed state to the normal attractor states of task (c).
+5. Build a representational similarity matrix, or RSM. 
+
+The RSM is:
+
+$$
+K^{(c'\rightarrow c)}*{\alpha,\alpha'}=
+\frac{1}{N} r^{(c)}*\alpha{}^\top r^{(c'\rightarrow c)}_{\alpha'}
+$$
+
+It measures how similar the normal and perturbed neural population states are. 
+
+For shared attractors, the RSMs for opposite perturbation directions should obey a symmetry:
+
+$$
+K^{(c'\rightarrow c)}_{\alpha,\alpha'}
+==
+
+K^{(c\rightarrow c')}_{\alpha',\alpha}
+$$
+
+The authors emphasize that this is a **necessary condition**, not a sufficient proof. A violation rules out shared attractors, but satisfying it does not guarantee shared attractors. 
+
+Interpretation rule:
+
+$$
+\text{RSM symmetry violated} \Rightarrow \text{not shared}
+$$
+
+$$
+\text{RSM symmetry present} \Rightarrow \text{compatible with shared, but not proof}
+$$
+
+They quantify this symmetry using Lin’s Concordance Correlation Coefficient, CCC. In Fig. 4, reflected and orthogonal solutions are rejected as shared-attractor solutions, while the parallel solution is a false positive because of an additional symmetry. 
+
+---
+
+# 5. Results and how to interpret them
+
+## Result 1: Shared latent dynamics can coexist with task-dependent neural activity
+
+This is one of the most important results.
+
+At first, it seems contradictory: if two tasks share the same component, shouldn’t neural activity look similar? The authors argue no. Shared components live in the latent factor space (\lambda), but population activity (r(t)) also depends on task input (c). Therefore, even if (\lambda(t)) follows the same dynamics across tasks, the observed firing-rate activity can still be task-dependent. 
+
+In the pro/anti memory example, the same latent ring attractor is reused, but the firing-rate representations form two disjoint task-specific rings. Task identity is therefore easy to decode from neural activity, even though the latent computation is shared. 
+
+Interpretation:
+
+> Do not equate “shared computation” with “similar raw neural activity.”
+> Shared computation may be hidden in a low-dimensional latent subspace.
+
+The geometric explanation is that task-dependent activity can lie mostly in the nullspace of (V), so it changes firing rates without changing the latent factors (\lambda = \frac{1}{N}V^\top r). Because (P \ll N), there is plenty of room for task-specific activity that does not disturb the shared latent dynamics. 
+
+---
+
+## Result 2: Shared components constrain connectivity statistics
+
+The authors construct four pro/anti solutions:
+
+1. Shared ring attractor.
+2. Parallel task-specific attractors.
+3. Reflected task-specific attractors.
+4. Orthogonal task-specific attractors.
+
+The connectivity-statistics test works as predicted: above-chance classification is only possible for networks using distinct attractors, not for the shared-attractor solution. 
+
+Interpretation:
+
+> If the classifier can tell which task a neuron-parameter point belongs to, then the autonomous dynamics are probably task-specific.
+> If it cannot, the tasks are compatible with shared autonomous dynamics.
+
+Fig. 3’s logic is: shared components imply identical statistics of task-dependent effective neuron parameters, so a classifier should fail. 
+
+---
+
+## Result 3: Perturbation responses reveal shared-attractor hallmarks
+
+The perturbation method tests whether switching the task input during memory produces a symmetric change in representational geometry.
+
+For a shared attractor, switching task input should not change the latent attractor state, although the firing-rate activity can still change. Therefore, the RSMs should obey the symmetry relation. 
+
+In Fig. 4:
+
+* Shared solution: passes the RSM symmetry test.
+* Reflected and orthogonal solutions: fail the test.
+* Parallel solution: also passes, but only because it has an extra symmetry. 
+
+Interpretation:
+
+> The perturbation test can reject some non-shared solutions, but it cannot prove sharing in every case.
+
+This is important experimentally: if you observe a strong violation of RSM symmetry after context/task perturbation, then shared attractor computation is unlikely. But if you observe symmetry, you still need caution.
+
+---
+
+## Result 4: End-to-end trained networks can use different solutions depending on rank
+
+For rank-8 and rank-4 low-rank networks trained end-to-end on the pro/anti task, the authors found different solutions. Fig. 5 shows that the rank-8 network uses shared attractors, while the rank-4 network does not. The same diagnostic methods—connectivity statistics and perturbation response—identify these solutions even when the ground truth is unknown. 
+
+Interpretation:
+
+> The task itself does not uniquely determine the mechanism.
+> Architecture and hyperparameters can push the network toward different computational solutions.
+
+This is a major lesson for interpreting trained RNNs: successful task performance is not enough. You need mechanistic analysis.
+
+---
+
+## Result 5: Task-dependence can enter at different loci
+
+The authors identify two main ways task identity can affect a shared-component computation:
+
+1. **Input modulation**: task input changes how stimulus input drives the latent dynamics.
+2. **Output modulation**: task input changes how the latent state is read out.
+
+In the pro/anti memory task, the same behavior can be solved either way:
+
+* Input-modulated solution: store the stimulus or its opposite in the same ring attractor.
+* Output-modulated solution: store the same stimulus, but flip the readout for the anti task.
+
+These can be distinguished by perturbing the task input during the memory period: switching task input changes the output for output-modulated solutions, but not for input-modulated solutions. 
+
+Interpretation:
+
+> The same task behavior can arise from different internal mechanisms.
+> Perturbation helps reveal *where* the task rule enters the computation.
+
+---
+
+## Result 6: In compositional tasks, components may be fully or partially shared
+
+In the categorization task, there are two contextual variables:
+
+$$
+c_{in}: \text{which stimulus feature to use}
+$$
+
+$$
+c_{out}: \text{which response channel to use}
+$$
+
+A minimal solution reuses the same attractors across all tasks. In that solution, (\psi_{in}) selects the relevant input feature, (\psi_{out}) selects the response channel, and (\psi_0) remains task-invariant. 
+
+But the network can also reuse attractors only across subsets of tasks. For example, attractors can be reused across tasks with the same relevant input feature but not the same response direction. In such cases, autonomous dynamics can be fully shared or only partially shared. 
+
+The authors then classify solutions according to where (c_{in}) and (c_{out}) enter: (\psi_0), (\psi_{in}), or (\psi_{out}). They construct nine qualitatively different solutions. 
+
+Interpretation:
+
+> Compositionality is not one single mechanism.
+> It is a family of possible mechanisms, depending on which components are shared and where task variables modulate the computation.
+
+---
+
+## Result 7: Complex multitask behavior can be solved with a shared ring attractor plus gating
+
+For the eight-task family, the network uses a three-dimensional autonomous flow-field with a fixed point and a shifted ring attractor. The third latent factor (\lambda_3) acts as a gate: stimulus input affects dynamics in the (\lambda_3=0) plane, but not on the ring attractor in the (\lambda_3=1) plane. This allows the first stimulus to be stored without being overwritten by a second stimulus in match-to-sample tasks. 
+
+Task-dependence is handled by input and readout flow-fields: pro/anti context is resolved by input-driven dynamics, while the readout resolves different task classes such as memory, delay, react, and match-to-sample. 
+
+Interpretation:
+
+> A single shared latent structure can support multiple tasks if different task variables control input routing, output gating, or readout rules.
+
+---
+
+# 6. Most important interpretation points
+
+### 1. “Shared” does not mean “same neural activity”
+
+The paper’s central conceptual point is that shared computation can be hidden in latent dynamics. Raw activity can look task-specific because task input changes the embedding from latent factors to firing rates.
+
+### 2. Task performance is underdetermined
+
+Many different internal mechanisms can solve the same task. Therefore, just training an RNN to high performance does not tell you what computation it learned.
+
+### 3. Perturbation is more informative than observation alone
+
+The authors emphasize that perturbing the task/context signal can distinguish mechanisms using experimentally accessible variables: task signal and neural activity. 
+
+### 4. AUC and CCC have opposite interpretations
+
+For the connectivity classifier:
+
+$$
+\text{High AUC} \Rightarrow \text{non-shared dynamics}
+$$
+
+For perturbation RSM symmetry:
+
+$$
+\text{High CCC} \Rightarrow \text{compatible with shared dynamics}
+$$
+
+But high CCC is not proof, because other symmetries can also produce it.
+
+### 5. The paper is theoretical/simulation-based
+
+The authors explicitly say their approach differs from standard end-to-end training: they design flow-fields and train networks to implement them, which gives precise control over the solution. 
