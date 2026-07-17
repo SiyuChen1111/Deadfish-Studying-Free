@@ -1,10 +1,10 @@
 # Deadfish🐟 Studying Free
 
-Personal study notes hosted on Vercel.
+Personal study notes hosted on GitHub Pages.
 
 ## 🌐 访问网站
 
-点击链接访问：[https://my-study-notes-lemon.vercel.app/](https://my-study-notes-lemon.vercel.app/)
+点击链接访问：[https://siyuchen1111.github.io/Deadfish-Studying-Free/](https://siyuchen1111.github.io/Deadfish-Studying-Free/)
 
 ## 📁 Project Structure
 
@@ -29,7 +29,7 @@ My-Study-Notes/
 ### Reinforcement Learning
 - 7 lectures on RL foundations
 - Topics: MDPs, model-free methods, value function approximation
-- [Course Link](https://my-study-notes-lemon.vercel.app/reinforcement-learning/README)
+- [Course Link](https://siyuchen1111.github.io/Deadfish-Studying-Free/reinforcement-learning/README)
 
 ### Cognitive Behavioral Computing [studying]
 - Principle of Cognitive Behavioral Computing
@@ -47,7 +47,7 @@ My-Study-Notes/
 
 ## 🚀 Deployment
 
-- **Hosting**: Vercel
+- **Hosting**: GitHub Pages
 - **CI/CD**: GitHub Actions
 - **Framework**: VitePress
 
