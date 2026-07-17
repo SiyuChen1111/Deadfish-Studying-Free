@@ -6,6 +6,9 @@ This section contains notes and summaries of research papers I've read.
 
 ### 2026
 
+- [A Battery of Image Classification Challenges Reveals Shared and Distinct Object Categorization Behavior Across Monkeys, Humans, and Deep Networks](./Zhang_et_al_2026) - Zhang, H., Zheng, Z., Hu, J., Wang, Q., Xu, M., Zhou, Z., Li, Z., & Okazawa, G. (2026)
+  - A note on the visually grounded categorization abilities of macaques, their limits on knowledge-dependent categories, and how their behavior compares with humans and deep networks.
+
 - [Interpretable Compositional Computation with Recurrent Neural Networks](./Pezon_Meegen_2026) - Pezon, L., & van Meegen, A. (2026)
   - A note on how shared low-dimensional dynamical components can coexist with task-dependent activity, and how this reframes our Face-Switch stage_results_v5 FINDR interpretation.
 
