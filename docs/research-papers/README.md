@@ -17,6 +17,9 @@ This section contains notes and summaries of research papers I've read.
 
 ### 2025
 
+- [Neural Representation of Action Symbols in Primate Frontal Cortex](./Tian_et_al_2025) - Tian, L. Y., et al. (2025)
+  - A detailed note on how invariant, categorical and recombinable stroke primitives are represented most clearly in the ventral premotor cortex during action planning.
+
 - [Elucidating the Selection Mechanisms in Context-Dependent Computation Through Low-Rank Neural Network Modeling](./Zhang_2025) - Zhang, Y., Feng, J., & Min, B. (2025)
   - A model-structure note explaining how low-rank RNNs implement context-dependent evidence selection through input modulation and selection-vector modulation.
 
